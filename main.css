@@ -1,10 +1,15 @@
 html {
- font-family: "Kosugi", serif;
+ font-family: "Kiwi Maru", serif;
+ margin: 0;
+ padding: 0;
 }
 body {
-  display: flex; /* 画面全体の配置を調整するための設定 */
+  display: block; /* 画面全体の配置を調整するための設定 */
   justify-content: center; /* コンテンツを中央に配置 */
-  padding: 80px 10px; /* 画面の上下に 0px の余白、左右に10pxの余白を設定 */
+  padding: 30px 5px; /* 画面の上下に 0px の余白、左右に10pxの余白を設定 */
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
 }
 
 .fixed-tab {
@@ -43,7 +48,7 @@ body {
 }
 
 .fixed-tab nav ul li a:hover {
-  color: #ffa500;
+  color: #e24f4f;
 }
 
 /* トップに戻るボタンのスタイル */
@@ -71,7 +76,7 @@ h1 {
 }
 
 .container {
-  max-width: 768px; /* コンテンツの最大幅を768pxに制限 */
+  max-width: 1500px; /* コンテンツの最大幅を768pxに制限 */
   width: 100%; /* コンテンツが幅いっぱいに広がるように設定 */
   margin: 0 auto; /* コンテンツを中央に配置 */
 }
@@ -85,9 +90,9 @@ img {
 
 .img-2col-container {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   margin: 20px 0;
-  min-height: 300px; /* コンテナ全体の最小の高さを設定 */
+  min-height: 400px; /* コンテナ全体の最小の高さを設定 */
 }
 
 .img-2col-container > div {
@@ -98,11 +103,36 @@ img {
 }
 
 .img-2col-container img {
-  width: 100%;
-  height: 300px; /* 画像の高さを固定 */
+  width: 80%;
   object-fit: cover; /* アスペクト比を維持しつつ、指定サイズに収める */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.img-Me {
+  margin: 100px 0 0 80px;
+  max-width: 30%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.rogo{
+  max-width: 150px;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.content{
+  display: flex; /* 横並びに配置 */
+  align-items: flex-start; /* 上端を揃える */
+  gap: 20px; /* 画像と文字の間に余白を追加 */
+  margin: 20px; /* 親要素全体の余白 */
+}
+
+.content p {
+  margin: 100px 0 0 50px;
+  font-size: 28px;
+  line-height: 2.0;
 }
 
 /* レスポンシブ対応 */
@@ -119,10 +149,15 @@ img {
   .img-2col-container img {
     height: 250px; /* モバイル表示時は少し小さく */
   }
+
+  .img-Me {
+    max-width: 60%;
+    height: auto;
+    border-radius: 10px;
+  }
 }
 
-/*Midasi*/
-.sample_h_18{
+.Midasi_h{
   font-size: 1.5em;/* フォントサイズ */
   font-weight: bold;/* フォント太さ */
   padding-top: .5em;
@@ -130,22 +165,73 @@ img {
   margin-bottom: 2em;
   position: relative;
   margin: 3em 0 2em;
-  color:#1e7aca;/* フォント色 */
+  color:#e24f4f;/* フォント色 */
   }
   
-  .sample_h_18:before {
+  .Midasi_h:before {
   position: absolute;
   content: "";
   display: block;
   width: 100%;
   height: 4px;
-  background: repeating-linear-gradient(90deg, #1e7aca 0%,rgba(255, 255, 255, 0) 100%);
+  background: repeating-linear-gradient(90deg, #e24f4f 0%,rgba(255, 255, 255, 0) 100%);
   bottom: 0;
   left: 0;
   z-index: 0;
   }
 
+  li {
+    margin: 5px 0; /* 項目間の余白 */
+    font-size: 20px; /* フォントサイズ */
+}
+
   h1:first-letter {
     font-size: 2em;
-    color: #7172ac;
+    color: #e24f4f;
   }
+  h1 {
+  margin-top: 60px; /* 固定タブの高さ + 少し余裕を持たせたマージン */
+  text-align: center;
+}
+
+  .kiwi-maru-regular {
+    font-family: "Kiwi Maru", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+  /* フッターのスタイル */
+.footer {
+  background-color: #333;
+  color: white; /* アイコンやテキストを白に */
+  padding: 20px 0;
+  text-align: center;
+  margin: 0;
+  width:100%;
+  position: relative; /* 必要に応じて追加 */
+}
+
+/* 基本のリンクスタイル */
+a {
+  text-decoration: none; /* 下線を削除 */
+  color: #3498db; /* 初期色 */
+  font-size: 16px; /* 初期フォントサイズ */
+  transition: color 0.3s ease, transform 0.3s ease; /* スムーズな変化を設定 */
+}
+
+/* カーソルを合わせたときのスタイル */
+a:hover {
+  color: #e24f4f; /* ホバー時の色 */
+  font-size: 18px; /* 少し拡大 */
+}
+
+video {
+  width: 80%; /* 動画の幅を画面幅の80%に設定 */
+  max-width: 1000px; /* 動画の最大幅を800pxに制限 */
+  border: 3px solid #333; /* 枠線を追加 */
+  border-radius: 10px; /* 枠線を丸める */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 影を追加 */
+  display: block; /* ブロック要素に設定 */
+  margin: 20px auto; /* 中央揃え */
+}
