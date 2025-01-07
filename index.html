@@ -3,11 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ポートフォリオ</title>
+    <title>Mattyan's portfolio</title>
     <link rel="stylesheet" href="main.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kosugi&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Kosugi&family=Sawarabi+Gothic&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- 固定タブ -->
@@ -15,57 +14,63 @@
       <nav>
           <ul>
               <li><a href="index.html">Home</a></li>
-              <li><a href="test.html">About</a></li>
+              <li><a href="about.html">About</a></li>
               <li><a href="projects.html">Projects</a></li>
-              <li><a href="#contact">Contact</a></li>
+              
           </ul>
       </nav>
-      <!-- トップに戻るボタン -->
-      <div class="top-button">
-          <a href="index.html">
-              <img src="top-button.png" alt="Top" title="Go to top">
-          </a>
-      </div>
   </header>
 
 
     <div class="container">
-      <h1>Mastus Portfolio</h1>
-      <p>関西在住の高専4年生です。メカトロ系の学科に在籍しています。</p>
+      <h1>Mattyan's Portfolio</h1>
+      <p>大阪公立大学高専メカトロニクスコースの4年生です。ろぼっと倶楽部に所属しており、<br>
+       2023年、2024年の高専ロボコンで優勝しました。</p><a href="about.html">>Read more</a>
 
-      <h2 class="sample_h_18">Works</h2>
+      <h1>Projects</h1>
 
-      <h3>2022年: </h3>
+      <h3>基礎研究</h3>
       <p>
-        3年次に「<strong>自律走行ロボットの開発プロジェクト</strong>」に取り組みました。
+        4年生の基礎研究では、寿司の提供システムを考え製作しました。メンバーは6人で、私はリーダー、回路、動画制作を行いました。<br>
+        提供システムは寿司チェーン店に導入することを想定し、4月から11月の高専祭までの期間で製作しました。回路として、エアシリンダ用のソレノイド駆動基板や、寿司注文ボタンを0から製作しました。
+        詳細は動画をご確認ください。
       </p>
+      
+      <div class="img-2col-container">
+        <div>
+          <img src="work-a.jpg" />
+        </div>
+        <div>
+          <img src="work-b.jpg" />
+        </div>
+      </div>
+      <video controls>
+        <source src="c-pv.mp4" type="video/mp4">
+        お使いのブラウザは動画の再生に対応していません。
+    </video>
+    <p>使用素材等　音楽：魔王魂　VOICEVOX：中国うさぎ</p>
+    <br>
+
+      <h3>ろぼっと倶楽部: </h3>
       <p>
-        は超音波センサ（検知範囲:5-100cm）を用いた障害物回避システムを搭載した「キャタピラ型走行ロボット」をクラスメイト4名とチームを組んで、要件定義から完成まで約16週間かけて取り組みました。自分は、Fusion
-        360（3次元CAD）を用いた機械設計を担当し、シャーシやマウント類など計127個の部品を設計しました（加工も共同で担当しました）。また、制御系の補助として、Arduino
-        で動かす自律制御プログラムの実装とテスト、調整も担当しました。。
+        <strong>全国2連覇しました！！！</strong></p><a href="projects.html">>Read more</a>
       </p>
       <div class="img-2col-container">
         <div>
-          <img src="work-01.jpg" />
+          <img src="member.jpg" />
         </div>
-        <div>
-          <img src="work-02.jpg" />
-        </div>
+        
       </div>
-
-      <h2>Skills</h2>
-      <p>
-        授業やクラブ活動、文化祭活動、趣味を含めて利用経験のあるハードウェアやソフトウェアの一覧です。習熟度の目安として累積使用時間が10時間以上のものを「★」、30時間以上を「★★」、100時間以上を「★★★」と表記しています。
-      </p>
-      <ul>
-        <li>Fusion 360（3D-CAD）</li>
-        <li>汎用旋盤</li>
-        <li>ボール盤</li>
-        <li>フライス盤</li>
-        <li>Arduino</li>
-        <li>電子工作（ブレッドボード）</li>
-        <li>Python</li>
-      </ul>
     </div>
+    <!-- フッター部分 -->
+    <footer class="footer">
+  <div>
+    <img src="rogo.png" class="rogo" />
+    <a href="https://www.ct.omu.ac.jp/campuslife/contests/robocon/">>大阪高専 ロボコン特設サイト</a>
+    <p><strong>©2025 Kanta Matsuura　All Rights Reserved.</strong></p>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
   </body>
 </html>
